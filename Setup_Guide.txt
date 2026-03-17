@@ -1,0 +1,60 @@
+RECIPE QUEST - SETUP GUIDE
+==========================
+
+REQUIREMENTS
+------------
+- Python 3.x
+- Node.js + npm
+- A terminal / command prompt
+
+STEP 1 - Download the project
+------------------------------
+Clone or download the project from GitHub and open a terminal in the project root folder.
+
+
+STEP 2 - Start the Backend
+---------------------------
+In your terminal, run these commands one at a time:
+
+    cd server
+    python3 -m venv venv
+    source venv/bin/activate
+    pip install -r requirements.txt
+    export FLASK_APP="app:create_app"
+    flask db init
+    flask db migrate -m "initial models"
+    flask db upgrade
+    python app.py
+
+You should see: "Running on http://127.0.0.1:5555"
+Leave this terminal running.
+
+
+STEP 3 - Start the Frontend
+----------------------------
+Open a NEW terminal window, then run:
+
+    cd client
+    npm install
+    npm run dev
+
+You should see: "Local: http://localhost:5173"
+Leave this terminal running too.
+
+
+STEP 4 - Open the App
+----------------------
+Open your browser and go to:
+
+    http://localhost:5173
+
+You will be taken to the login page. Click "Register" to create a new account and start using the app.
+
+
+NOTES
+-----
+- Both terminals must be running at the same time for the app to work.
+- The backend runs on port 5555 and the frontend runs on port 5173.
+- If you close a terminal and need to restart:
+    Backend: cd server -> source venv/bin/activate -> python app.py
+    Frontend: cd client -> npm run dev

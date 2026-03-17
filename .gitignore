@@ -1,0 +1,39 @@
+# Python / Flask
+server/venv/
+server/__pycache__/
+server/**/__pycache__/
+server/*.pyc
+server/instance/
+server/migrations/
+
+# SQLite database
+*.db
+*.sqlite3
+
+# Environment variables
+.env
+.env.local
+
+# React / Node
+client/node_modules/
+client/dist/
+client/.env
+client/.env.local
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
+```
+
+Your project root should now look like:
+```
+recipe-quest/
+├── .gitignore      ← here
+├── server/
+│   ├── venv/       ← ignored ✓
+│   ├── app.py
+│   └── ...
+└── client/         ← coming later
